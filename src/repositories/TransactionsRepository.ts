@@ -50,14 +50,8 @@ class TransactionsRepository {
 
   public create({title, value, type}: CreateTransactionDTO) : Transaction {
     const transaction = new Transaction({title, value, type})
-    //if (type === "income") {
     this.transactions.push(transaction);
     return transaction
-    //}
-    //else { //avaliar se tem saldo pra saque
-
-    //}
-    //return transaction
   }
 }
 
